@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Attribute of nput tag</title>
+
+
+    </head>
+    <body>
+        <form autocomplete="off" action="http://localhost:5959">
+            Name:<input type="text" tabindex="1" name="personname"
+            autofocus="autofocus" pattern="^[A-Za-z ]*$"
+            required="required"><br>
+            Land Line:<input type="text" tabindex="3" name="landline"
+            required="required">
+            Mobile:<input type="text" tabindex="2" name="moblile"
+            required="required" pattern="^[789]\d{9}$"><br>
+
+            Email:<input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"><br>
+            <input type="checkbox" checked ="checked">Recieved News Letters<br>
+            Attachement:<input type="file" multiple ="multiple"><br>
+            Age:<input type="number" min="18" max="60"><br>
+            Amount:<input type="number" min="1000" max="10000"
+            step="100"><br>
+            Search Course:<input type="search" list="list1"><br>
+            <datalist id="list1">
+                <option>JAVA</option>
+                <option>.NET </option>
+                <option>Blockchain </option>
+                <option>Angular</option>
+                <option>HTML,CSS,JavaScript </option>
+                <option>Nodejs</option>
+                <option>AWS</option>
+
+            </datalist>
+            <input type="submit">
+        </form>
+    </body>
+
+
+
+
+</html>
