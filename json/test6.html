@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JSON Tutorial</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<script type="text/javascript">
+		var  data = {
+			           "name" : "Divyanshu",
+			           "city" : "kanpur",
+			           "colors" : ["red", "orange" , "yellow"],
+
+			"records" : [
+			{ "name" : "sandeep" , "city" : "Bhopal"},
+		    {"name" : "piyush" , "city" : "Bangalore"}
+
+		    ]
+
+		    };                            
+
+		
+		function sendJSON() {
+			window.location = 'handleJSON.php'
+		}
+		
+		
+		
+
+	</script>
+	<button onclick="sendJSON()">Send json data</button>
+
+</body>
+</html>
