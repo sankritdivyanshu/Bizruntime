@@ -1,0 +1,49 @@
+﻿<html>
+<head>
+
+<title>
+    Object oriented java Script
+</title>
+
+
+</head>
+<body>
+    <!--Inheritance :-
+    1. single level
+    2.multilevel
+    3.hirachical-->
+    <script>
+        function Papa()
+        {
+
+        }
+        Papa.prototype.car = function ()
+        {
+            alert("BMW");
+        }
+        function Sonu() {
+            //constructor
+        }
+        Sonu.prototype= Object.create(Papa.prototype);
+        Sonu.prototype.cycle = function () {
+            alert("Hero")
+        }
+        var s = new Sonu();
+        s.car();
+        s.cycle();
+
+
+
+
+
+    </script>
+   
+
+
+</body>
+
+
+
+
+
+</html>

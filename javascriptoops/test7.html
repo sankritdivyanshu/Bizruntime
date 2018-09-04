@@ -1,0 +1,21 @@
+﻿<script type="text/javascript">
+
+    function Circle(radius)
+    {
+        this.radius = radius;
+        Circle.PI = 3.341;
+        this.CalculateArea = function ()
+        {
+            return Circle.PI * this.radius * this.radius;
+        }
+    }
+
+    var circle = new Circle(10);
+    document.write("Area= " + circle.CalculateArea());
+
+
+
+
+
+
+</script>

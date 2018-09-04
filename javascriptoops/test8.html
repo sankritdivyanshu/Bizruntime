@@ -1,0 +1,28 @@
+﻿<script type="text/javascript">
+
+    function Shape(shapeName)
+    {
+        this.shapeName = shapeName;
+        // this.Count = ++this.Count || 1;
+        Shape.Count = ++Shape.Count || 1;
+
+        Shape.ShowCount = function ()
+        {
+            return Shape.Count;
+        }
+    }
+    var shape1 = new Shape("Circle");
+    var shape2 = new Shape("Rectangle");
+    var shape3 = new Shape("Triangle");
+    var shape4 = new Shape("square");
+
+    document.write("Shape Count = " + Shape.ShowCount());
+
+   
+
+
+
+
+
+
+</script>
