@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#duggu1").fadeIn();
+        $("#duggu2").fadeIn("slow");
+        $("#duggu3").fadeIn(3000);
+    });
+});
+</script>
+</head>
+<body>
+
+<p>Demonstrate fadeIn() with different parameters.</p>
+
+<button>Click to fade in boxes</button><br><br>
+
+<div id="duggu1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="duggu2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="duggu3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+
+</body>
+</html>
