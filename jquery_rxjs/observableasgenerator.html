@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src ="https://unpkg.com/@reactivex/rxjs@5.3.0/dist/global/Rx.js"></script>
+</head>
+<body>
+    <script>
+ function foo() {
+  console.log('Hello');
+  return 42;
+}
+
+var x = foo.call(); // same as foo()
+console.log(x);
+var y = foo.call(); // same as foo()
+console.log(y);
+    </script>
+
+</body>
+<button>click</button>
+</html>

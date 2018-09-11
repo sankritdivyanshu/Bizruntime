@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src ="https://unpkg.com/@reactivex/rxjs@5.3.0/dist/global/Rx.js"></script>
+</head>
+<body>
+    <script>
+ var observable1 = Rx.Observable.interval(400);
+var observable2 = Rx.Observable.interval(300);
+
+var subscription = observable1.subscribe(x => console.log('first: ' + x));
+var childSubscription = observable2.subscribe(x => console.log('second: ' + x));
+
+subscription.add(childSubscription);
+
+setTimeout(() => {
+  // Unsubscribes BOTH subscription and childSubscription
+  subscription.unsubscribe();
+}, 1000);
+    </script>
+
+</body>
+<button>click</button>
+</html>
