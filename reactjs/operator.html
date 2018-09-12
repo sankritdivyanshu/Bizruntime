@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <script src ="https://unpkg.com/@reactivex/rxjs@5.3.0/dist/global/Rx.js"></script>
+	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/4.1.0/rx.all.js"></script> -->
+
+</head>
+<body>
+	<script>
+	var subject = new Rx.AsyncSubject();
+
+  function square(input)
+   {
+  var output = Rx.Observable.create(function subscribe(observer) 
+  {
+    input.subscribe({
+      next: (v) => observer.next(v* v),
+      error: (err) => observer.error(err),
+      complete: () => observer.complete()
+          });
+     });
+      return output;
+  }
+</script>
+<script >
+   function cube(input)
+   {
+  var output1 = Rx.Observable.create(function subscribe(observer) 
+  {
+    input.subscribe({
+      next: (v) => observer.next(v* v *v),
+      error: (err) => observer.error(err),
+      complete: () => observer.complete()
+          });
+     });
+      return output1;
+  }
+var input = Rx.Observable.from([1,2,3,4,5,6,7,8]);
+//var numbers = Rx.Observable.range(1, 7);
+//var output = multiplyByTen(input);
+var output = square(input);
+var output1 = cube(input);
+
+
+output.subscribe(x => console.log(x));
+output1.subscribe(x=>console.log(x));
+
+
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <script src ="https://unpkg.com/@reactivex/rxjs@5.3.0/dist/global/Rx.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/4.1.0/rx.all.js"></script> 
+
+</head>
+<body>
+	<script>
+	var observable = Rx.Observable.interval(1000 /* number of milliseconds */);
+
+	var observable1 = Rx.Observable.interval(1000);
+var observable2 = Rx.Observable.interval(400);
+
+var merged = Rx.Observable.merge(observable1, observable2);
+
+
+	</script>
+
+
+</body>
+</html>

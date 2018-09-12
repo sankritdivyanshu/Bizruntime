@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <script src ="https://unpkg.com/@reactivex/rxjs@5.3.0/dist/global/Rx.js"></script>
+	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/4.1.0/rx.all.js"></script> -->
+
+</head>
+<body>
+	<script>
+	
+  var subject = new Rx.ReplaySubject(100); // buffer 3 values for new subscribers
+
+subject.subscribe({
+  next: (v) => console.log('observerA: ' + v)
+});
+for(int i=0;i <=100; 1++)
+{
+	subject.next(i);
+}
+
+//subject.next(1);
+//subject.next(2);
+//subject.next(3);
+//subject.next(4);
+
+subject.subscribe({
+  next: (v) => console.log('observerB: ' + v)
+});
+
+//subject.next(5);
+	</script>
+
+
+</body>
+</html>

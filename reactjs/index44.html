@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Addition of two number using  js</title>
+	<script language="javascript">
+		
+		function prime()
+		{
+			var fnum=window.prompt("Enter the first number");
+            var ffnum = parseInt(fnum);
+			int count =0;
+			for(int i=1; i<= ffnum;i++)
+			{
+                if(ffnum%i==0)
+				{
+				  count++;
+				}
+			}
+			if(count==2)
+			{
+				document.writeln("number is prime");
+			}
+			else
+			{
+				document.writeln("number is not prime");
+			}
+		}
+
+	</script>
+
+</head>
+<body>
+	<form name="frm1">
+	<input type ="textfield" value="">
+		<input type="button" value="number" onclick= "prime()"> <br>
+		
+		
+		
+	</form>
+
+</body>
+</html>

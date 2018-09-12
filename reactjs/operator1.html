@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <script src ="https://unpkg.com/@reactivex/rxjs@5.3.0/dist/global/Rx.js"></script>
+	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/4.1.0/rx.all.js"></script>  -->
+
+</head>
+<body>
+	<script>
+	var seconds = Rx.Observable.interval(1000);
+var clicks = Rx.Observable.fromEvent(document, 'click');
+var secondsBeforeClick = seconds.takeUntil(clicks);
+var result = secondsBeforeClick.count();
+result.subscribe(x => console.log(x));
+
+	</script>
+
+
+</body>
+</html>

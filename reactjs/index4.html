@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Addition of two number using  js</title>
+	<script language="javascript">
+		
+		function add()
+		{
+			var fnum=window.prompt("Enter the first number");
+			 var snum = window.prompt("enter the 2nd number");
+
+			 var ffnum =parseInt(fnum);	
+			  var ssnum = parseInt(snum);
+			 var result = ffnum + ssnum;
+			 document.writeln("Addition of two number is:" + result);
+		}
+		function sub()
+		{
+			var fnum=window.prompt("Enter the first number");
+			var snum = window.prompt("enter the 2nd number");
+
+
+			 var ffnum =parseInt(fnum);
+			 var ssnum = parseInt(snum);
+			 var result = ffnum - ssnum;
+			 document.writeln("subtraction of two number is:" + result);
+		}
+		function mul()
+		{
+			var fnum=window.prompt("Enter the first number");
+			 var snum = window.prompt("enter the 2nd number");
+			 var ffnum =parseInt(fnum);
+			 var ssnum = parseInt(snum);
+			 var result = ffnum * ssnum;
+			 document.writeln("multiplication of two number is:" + result);
+		}
+		function div()
+		{
+			var fnum=window.prompt("Enter the first number");
+			 var snum = window.prompt("enter the 2nd number");
+			 var ffnum =parseInt(fnum);
+			 var ssnum = parseInt(snum);
+			 var result = ffnum / ssnum;
+			 document.writeln("division of two number is:" + result);
+		}
+		function square()
+		{
+			var num=window.prompt("Enter the number");
+			 var fnum =parseInt(num);
+			 var result = fnum*fnum;
+			 document.writeln("square of number is:" + result);
+		}
+		function cube()
+		{
+			var num=window.prompt("Enter the number");
+			 var fnum =parseInt(num);
+			 var result = fnum*fnum*fnum;
+			 document.writeln("cube of number is:" + result);
+		}
+
+	</script>
+
+</head>
+<body>
+	<form name="frm1">
+		<input type="button" value="Addition" onclick= "add()"> <br>
+		<input type="button" value="Subtraction" onclick= "sub()"> <br>
+		<input type="button" value="multiplication" onclick= "mul()"> <br>  
+		<input type="button" value="Division" onclick= "div()">  <br>
+		<input type="button" value="square" onclick= "square()"> <br>
+		<input type="button" value="cube" onclick= "cube()">
+		
+	</form>
+
+</body>
+</html>
