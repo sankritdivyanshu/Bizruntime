@@ -26,5 +26,10 @@ namespace WindowsFormsApp1
             MessageBox.Show("connected");
             con.Close();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
